@@ -10,7 +10,8 @@ body{
     background-color: blueviolet;
     padding-top: 1%;
     border-radius: 10%;
-    width: 10%;
+    width: 12vw;
+    min-width: 200px;
     height: auto;
     color: white;
 }
