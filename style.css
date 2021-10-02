@@ -1,16 +1,57 @@
 body{
     text-align: center;
+    background-color: black;
+}
+
+.orderContainer{
+    /* position: absolute; */
+    margin: auto;
+    margin-top: 35vh;
+    background-color: blueviolet;
+    padding-top: 1%;
+    border-radius: 10%;
+    width: 10%;
+    height: auto;
+    color: white;
+}
+
+#orderList{
+    padding: 10%;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #orderList li{
     list-style: none;
+    padding: 10%;
+}
+
+a:any-link {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 0px 8px 5px black;
+}
+
+#poInfo{
+    margin-top: 20vh;
+    color: white;
+}
+
+#poInfo p{
+    padding-bottom: 5vh;
 }
 
 table, th, td{
     background-color: cornflowerblue;
     margin: auto;
-    border: 5px solid white;
+    margin-top: 10vh;
     border-collapse: collapse;
-    border-radius: 30px;
+    /* border-spacing: 0; */
     padding: 10px;
+    border: 5px solid black;
+    border-radius: 30px;
+    
 }
