@@ -23,9 +23,37 @@ function displayOrder() {
 
   $.getJSON("purchaseorders.json", function (data) {
     console.log(data);
+    var order = data.mvPurchaseOrders[orderId];
+    console.log(order);
     var poAddress = document.getElementById("poAddress");
+    poAddress.innerHTML = order.PurchaseOrderAddress;
     var poContact = document.getElementById("poContact");
+    poContact.innerHTML = order.PurchaseOrderContactPerson;
     var poStatus = document.getElementById("poStatus");
+    poStatus.innerHTML = order.PurchaseOrderStatus;
     var poDetails = document.getElementById("poDetails");
+    for (var i = 0; i < order.PurchaseOrderDetails.length; i++) {
+      var detRow = document.createElement("tr");
+      poDetails.appendChild(detRow);
+      var prodSKU = document.createElement("td");
+      prodSKU.innerHTML =
+        order.PurchaseOrderDetails[i].PurchaseOrderRowProductSKU;
+      var quantity = document.createElement("td");
+      quantity.innerHTML =
+        order.PurchaseOrderDetails[i].PurchaseOrderRowQuantity;
+      var unitPrice = document.createElement("td");
+      unitPrice.innerHTML =
+        order.PurchaseOrderDetails[
+          i
+        ].PurchaseOrderRowUnitPriceWithoutTaxOrDiscount;
+      var totalAmount = document.createElement("td");
+      totalAmount.innerHTML =
+            order.PurchaseOrderDetails[i].PurchaseOrderRowTotalAmount;
+        
+        detRow.appendChild(prodSKU);
+        detRow.appendChild(quantity);
+        detRow.appendChild(unitPrice);
+        detRow.appendChild(totalAmount);
+    }
   });
 }

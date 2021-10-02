@@ -1,7 +1,16 @@
-#orderList{
+body{
     text-align: center;
 }
 
 #orderList li{
     list-style: none;
+}
+
+table, th, td{
+    background-color: cornflowerblue;
+    margin: auto;
+    border: 5px solid white;
+    border-collapse: collapse;
+    border-radius: 30px;
+    padding: 10px;
 }
