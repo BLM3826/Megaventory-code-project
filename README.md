@@ -13,4 +13,4 @@
 * A small project on account creation and login website on PHP.
 * A university project on a Movie Club with movie data based on Omdb API created with Java Spring-Boot and JS.
 
-Both projects public on my github.
+Both projects are public on my github.
